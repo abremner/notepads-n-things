@@ -12,8 +12,6 @@ class App extends Component {
       bestPSM: {},
     }
     this.generateReport = this.generateReport.bind(this);
-    this.getData = this.getData.bind(this);
-    this.getChadstoneSales = this.getChadstoneSales.bind(this);
   }
   getChadstoneSales() {
     const data = this.state.storeData;
