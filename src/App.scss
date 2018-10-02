@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+
+$primary-color: #306dd1;
+$white: #ffffff;
+
+.App {
+  > header {
+    padding: 40px;
+    background: $primary-color;
+    color: $white;
+    h1 {
+      font-family: 'Yellowtail';
+      font-weight: normal;
+      font-size: 4rem;
+    }
+  }
+  > section {
+    padding: 40px;
+    button {
+      padding: 10px 40px;
+      background: $primary-color;
+      color: $white;
+      font-size: 1rem;
+    }
+  }
+}
