@@ -15,4 +15,4 @@ The project will launch in your browser on http://localhost:3000/
 * This project was generated with Create React App
 * Future improvements would be
   * Add Currecy formatting compontent
-  * Add unit tests
+  * A̶d̶d̶ ̶u̶n̶i̶t̶ ̶t̶e̶s̶t̶s̶ ✅
