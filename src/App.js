@@ -13,13 +13,11 @@ class App extends Component {
     }
     this.generateReport = this.generateReport.bind(this);
   }
-  getChadstoneSales() {
-    const data = this.state.storeData;
+  getChadstoneSales(data) {
     const chadstone = data.find((store) => store.centre === 'Chadstone');
     return chadstone.totalSales;
   }
-  getMostSales() {
-    const data = this.state.storeData;
+  getMostSales(data) {
     let totalSales = 0;
     let mostSalesStore = {};
     data.forEach((store) => {
@@ -30,15 +28,13 @@ class App extends Component {
     })
     return mostSalesStore;
   }
-  getVicSales() {
-    const data = this.state.storeData;
+  getVicSales(data) {
     const vicStores = data.filter(store => store.state === 'VIC');
     let vicSales = 0;
     vicStores.forEach(store => vicSales += store.totalSales);
     return vicSales;
   }
-  getBestPSM() {
-    const data = this.state.storeData;
+  getBestPSM(data) {
     let topPSM = 0;
     let bestPSMStore = {};
     data.forEach((store) => {
@@ -57,10 +53,10 @@ class App extends Component {
   }
   async generateReport() {
     await this.getData().then(data => this.setState({storeData: data}));
-    const chadstoneSales = this.getChadstoneSales();
-    const mostSales = this.getMostSales();
-    const vicSales = this.getVicSales();
-    const bestPSM = this.getBestPSM();
+    const chadstoneSales = this.getChadstoneSales(this.state.storeData);
+    const mostSales = this.getMostSales(this.state.storeData);
+    const vicSales = this.getVicSales(this.state.storeData);
+    const bestPSM = this.getBestPSM(this.state.storeData);
     this.setState({
       chadstoneSales,
       mostSales,
