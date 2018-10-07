@@ -1,7 +1,8 @@
 # Notepads 'n' Things
 
 ### Demo
-View a live version of this site here https://abremner.github.io/notepads-n-things/
+View a live version of this site here https://abremner.github.io/notepads-n-things/  
+The core logic of this project can be found in `/src/App.js`
 
 ### To Run this project
 1. Clone the repo
